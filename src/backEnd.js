@@ -52,3 +52,13 @@ export function findAge(month, date, year) {
     return (birthday(year) - 1);
   }
 }
+
+export class GalacticAge {
+  constructor(age) {
+    this.age = age;
+    this.ageMercury = parseFloat((age/0.24).toFixed(2));
+    this.ageVenus = parseFloat((age/0.62).toFixed(2));
+    this.ageMars = parseFloat((age/1.88).toFixed(2));
+    this.ageJupiter = parseFloat((age/11.86).toFixed(2));
+  }
+}
