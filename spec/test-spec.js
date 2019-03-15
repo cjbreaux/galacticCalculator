@@ -74,9 +74,15 @@ describe('GalacticAge', function() {
     expect(myAge.ageJupiter).toEqual(2.95);
   });
 
-  it('should return years left remaining on any planet', function() {
+  it('should return years exceeding life expectancy on any planet', function() {
     let myAge = new GalacticAge(25);
+    let output = myAge.yearsLeft(10, myAge.age)
+    expect(output).toEqual(`You have exceeded the life expectancy on this planet by 15 years.`);
+  });
+
+  it('should return years left to live on any planet', function() {
+    let myAge = new GalacticAge(35);
     let output = myAge.yearsLeft(79, myAge.age)
-    expect(output).toEqual(54.00);
+    expect(output).toEqual(`You have 44 years left to live on this planet`);
   });
 });

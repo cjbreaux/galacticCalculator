@@ -62,6 +62,12 @@ export class GalacticAge {
     this.ageJupiter = parseFloat((age/11.86).toFixed(2));
   }
   yearsLeft(lifeExpectancy,planetAge) {
-    return lifeExpectancy - planetAge;
+    let years = Math.abs(lifeExpectancy - planetAge);
+    if (lifeExpectancy > planetAge) {
+      return `You have ${years} years left to live on this planet`;
+    } else {
+      return `You have exceeded the life expectancy on this planet by ${years} years.`;
+
+    }
   }
 }
