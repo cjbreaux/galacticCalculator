@@ -1,19 +1,18 @@
-## Planning
+## Project Title
+Galactic Calculator
 
-#### Configuration/dependencies
+#### Names of Author(s)
+Chris Breaux
 
+#### Date of Completion
 
-Dependencies | Location | Description
-------------- | ----- | ------
-webpack | _package.json_ | Module bundler
-webpack-cli | _package.json_ | Command line interface for webpack
-webpack-dev-server | _package.json_ | _
-uglifyjs-webpack-pulugin | _package.json_ | Renames variables and functions
-etc | _etc_ | etc
+3.15.2019
 
- * For version information for each dependency, please refer to the package.json
+### Description
 
-#### Specs
+This is the first independent project from the JavaScript  track at Epicodus. The intent is to practice unit testing with Jasmine & Karma, separation of logic, using classes, and configuring a development environment using webpack. This application will be able to take in a users birthday and calculate their age on Earth, Mercury, Venus, Mars and Jupiter. In addition, the user will enter a life expectancy value and the application will determine the years remaining or in excess for the given planets.
+
+### Specs
 
 Specification | Input | Output
 ------------- | ----- | ------
@@ -28,17 +27,43 @@ Take in a year, month, date, life expectancy, planet and return remaining years 
 Take in a year, month, date life expectancy, planet and return age past life expectancy if the age exceeds the life expectancy on that planet | _September, 9, 1983, 79, Mercury_ | _66.83_
 
 
-#### Integration
-  * Configure package.json, webpack.config.js, .gitignore, .eslintrc
-  * Add initial project files and directories
-  * Configure karma.conf.js
+
+### Technologies and Resources
+
+* HTML  
+* Sass
+* JavaScript
+* jQuery
+* Webpack v4.19.1
+* Karma v2.0.0
+* Jasmine v3.1.0
+
+### Responsiveness
+
+Currently, the site is only minimally styled. UI/UX with responsive elements are planned.
+
+### Setup Instructions
+* Clone file from https://github.com/cjbreaux/galacticCalculator.git
+* Navigate to the cloned folder in the terminal.
+* While in the project folder, run the following in the terminal:
+ ```html
+$ npm i
+```
+* After the files have downloaded, run the following:
+```html
+$ npm start
+```
 
 
-#### Polish
-  * Run linter to make sure code is clean
-  * Make README awesome
 
-#### Stretch Goals
-  * UI logic
-  * Custom css styling
-  * Additional Calculator Features
+### Stretch Goals
+
+* Style page using bootstrap and custom css.
+* Error checking on input fields.
+* Refactor UI logic to utilize looping (especially in the UI);
+
+### License
+
+GNU License
+
+Copyright (c) 2019 **Chris Breaux**
