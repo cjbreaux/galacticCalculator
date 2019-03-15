@@ -3,6 +3,8 @@ import { test } from './../src/backEnd.js';
 import { birthday } from './../src/backEnd.js';
 import { getBirthYear } from './../src/backEnd.js';
 import { checkMonth } from './../src/backEnd.js';
+import { checkDate } from './../src/backEnd.js';
+
 
 
 
@@ -34,13 +36,22 @@ describe('getBirthYear', function() {
     const age = 35;
     const output = getBirthYear(age);
     expect(output).toEqual(1984);
-  })
-})
+  });
+});
 
 describe('checkMonth', function() {
 
   it('should check if current month is past the input month', function() {
     const output = checkMonth('January', 1990);
     expect(output).toEqual(true);
-  })
-})
+  });
+});
+
+
+describe('checkDate', function() {
+
+  it('should check if current day of the month is past the current day of the month', function() {
+    const output = checkDate('January 16, 1990');
+    expect(output).toEqual(false);
+  });
+});
