@@ -4,6 +4,7 @@ import { birthday } from './../src/backEnd.js';
 import { getBirthYear } from './../src/backEnd.js';
 import { checkMonth } from './../src/backEnd.js';
 import { checkDate } from './../src/backEnd.js';
+import { findAge } from './../src/backEnd.js';
 
 
 
@@ -53,5 +54,12 @@ describe('checkDate', function() {
   it('should check if current day of the month is past the current day of the month', function() {
     const output = checkDate('January 16, 1990');
     expect(output).toEqual(false);
+  });
+});
+
+describe('findAge', function() {
+  it('should correctly return an age give month, date, year', function() {
+    const output = findAge('September', 9, 1993);
+    expect(output).toEqual(25);
   });
 });

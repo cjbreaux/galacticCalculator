@@ -3,7 +3,6 @@ export function test() {
 }
 
 export function birthday(year) {
-  let yearString = `${year}`;
   let date = new Date();
   let currentYear = date.getFullYear();
   let age = currentYear - year;
@@ -11,8 +10,8 @@ export function birthday(year) {
 
 }
 
-export function checkMonth(month,year) {
- let userMonth = new Date(`${month}, ${year}`);
+export function checkMonth(month) {
+ let userMonth = new Date(`${month}, 0000`);
  let date = new Date();
  let currentMonth = date.getMonth();
  let inputMonth = userMonth.getMonth();
@@ -41,4 +40,15 @@ export function checkDate(date) {
     return false;
   }
 
+}
+
+export function findAge(month, date, year) {
+  let inputDate = `${month} ${date}, ${year}`;
+  let userDate = new Date(inputDate);
+  let currentDate = new Date();
+  if (checkMonth(month) === true && checkDate(date) === true) {
+    return birthday(year)
+  } else {
+    return (birthday(year) - 1);
+  }
 }
