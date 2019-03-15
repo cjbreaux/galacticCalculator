@@ -1,7 +1,6 @@
 
 import { test } from './../src/backEnd.js';
 import { birthday } from './../src/backEnd.js';
-import { getBirthYear } from './../src/backEnd.js';
 import { checkMonth } from './../src/backEnd.js';
 import { checkDate } from './../src/backEnd.js';
 import { findAge } from './../src/backEnd.js';
@@ -30,15 +29,6 @@ describe('birthday', function() {
 
 });
 
-
-describe('getBirthYear', function() {
-
-  it('should return the birth year given an age', function() {
-    const age = 35;
-    const output = getBirthYear(age);
-    expect(output).toEqual(1984);
-  });
-});
 
 describe('checkMonth', function() {
 

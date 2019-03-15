@@ -2,11 +2,6 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './input.scss';
-import { test } from  './backEnd.js';
-import { birthday } from './backEnd.js';
-import { getBirthYear } from './backEnd.js';
-import { checkMonth } from './backEnd.js';
-import { checkDate } from './backEnd.js';
 import { findAge } from './backEnd.js';
 import { GalacticAge } from './backEnd.js';
 
