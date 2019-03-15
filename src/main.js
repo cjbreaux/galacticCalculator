@@ -1,4 +1,6 @@
 import $ from 'jquery';
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './input.scss';
 import { test } from  './backEnd.js';
 import { birthday } from './backEnd.js';
