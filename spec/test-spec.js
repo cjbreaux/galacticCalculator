@@ -67,11 +67,16 @@ describe('findAge', function() {
 describe('GalacticAge', function() {
   it('should return an object containing the galactic ages given an age on earth', function() {
     let myAge = new GalacticAge(35);
-    expect(myAge.age).toEqual(35);
+    expect(myAge.age).toEqual(35.00);
     expect(myAge.ageMercury).toEqual(145.83);
     expect(myAge.ageVenus).toEqual(56.45);
     expect(myAge.ageMars).toEqual(18.62);
     expect(myAge.ageJupiter).toEqual(2.95);
+  });
 
+  it('should return years left remaining on any planet', function() {
+    let myAge = new GalacticAge(25);
+    let output = myAge.yearsLeft(79, myAge.age)
+    expect(output).toEqual(54.00);
   });
 });
