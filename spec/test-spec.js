@@ -41,9 +41,9 @@ describe('checkMonth', function() {
 
 describe('checkDate', function() {
 
-  it('should check if current day of the month is past the current day of the month', function() {
-    const output = checkDate('January 16, 1990');
-    expect(output).toEqual(false);
+  it('should check if current day of the week is past the input day of the week', function() {
+    const output = checkDate('January 1, 1990');
+    expect(output).toEqual(true);
   });
 });
 
